@@ -1,0 +1,322 @@
+
+@online{berkFairnessCriminalJustice2017,
+  title = {Fairness in {{Criminal Justice Risk Assessments}}: {{The State}} of the {{Art}}},
+  shorttitle = {Fairness in {{Criminal Justice Risk Assessments}}},
+  author = {Berk, Richard and Heidari, Hoda and Jabbari, Shahin and Kearns, Michael and Roth, Aaron},
+  date = {2017-05-27},
+  url = {http://arxiv.org/abs/1703.09207},
+  urldate = {2020-09-09},
+  abstract = {Objectives: Discussions of fairness in criminal justice risk assessments typically lack conceptual precision. Rhetoric too often substitutes for careful analysis. In this paper, we seek to clarify the tradeoffs between different kinds of fairness and between fairness and accuracy. Methods: We draw on the existing literatures in criminology, computer science and statistics to provide an integrated examination of fairness and accuracy in criminal justice risk assessments. We also provide an empirical illustration using data from arraignments. Results: We show that there are at least six kinds of fairness, some of which are incompatible with one another and with accuracy. Conclusions: Except in trivial cases, it is impossible to maximize accuracy and fairness at the same time, and impossible simultaneously to satisfy all kinds of fairness. In practice, a major complication is different base rates across different legally protected groups. There is a need to consider challenging tradeoffs.},
+  archivePrefix = {arXiv},
+  eprint = {1703.09207},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/A77DUJ3A/Fairness_in_Criminal_Justice_Risk_Assessments_Berk_et_al_2017.pdf},
+  keywords = {_tablet,Statistics - Machine Learning},
+  langid = {english},
+  primaryClass = {stat}
+}
+
+@article{chenFairnessUnawarenessAssessing2019,
+  title = {Fairness {{Under Unawareness}}: {{Assessing Disparity When Protected Class Is Unobserved}}},
+  shorttitle = {Fairness {{Under Unawareness}}},
+  author = {Chen, Jiahao and Kallus, Nathan and Mao, Xiaojie and Svacha, Geoffry and Udell, Madeleine},
+  date = {2019},
+  journaltitle = {Proceedings of the Conference on Fairness, Accountability, and Transparency - FAT* '19},
+  pages = {339--348},
+  doi = {10.1145/3287560.3287594},
+  url = {http://arxiv.org/abs/1811.11154},
+  urldate = {2020-10-22},
+  abstract = {Assessing the fairness of a decision making system with respect to a protected class, such as gender or race, is challenging when class membership labels are unavailable. Probabilistic models for predicting the protected class based on observable proxies, such as surname and geolocation for race, are sometimes used to impute these missing labels for compliance assessments. Empirically, these methods are observed to exaggerate disparities, but the reason why is unknown. In this paper, we decompose the biases in estimating outcome disparity via threshold-based imputation into multiple interpretable bias sources, allowing us to explain when over- or underestimation occurs. We also propose an alternative weighted estimator that uses soft classification, and show that its bias arises simply from the conditional covariance of the outcome with the true class membership. Finally, we illustrate our results with numerical simulations and a public dataset of mortgage applications, using geolocation as a proxy for race. We confirm that the bias of threshold-based imputation is generally upward, but its magnitude varies strongly with the threshold chosen. Our new weighted estimator tends to have a negative bias that is much simpler to analyze and reason about.},
+  archivePrefix = {arXiv},
+  eprint = {1811.11154},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/ZBEWFERL/Chen et al. - 2019 - Fairness Under Unawareness Assessing Disparity Wh.pdf},
+  keywords = {Statistics - Applications,Statistics - Machine Learning},
+  langid = {english}
+}
+
+@online{chungAutomatedDataSlicing2019,
+  title = {Automated {{Data Slicing}} for {{Model Validation}}:{{A Big}} Data - {{AI Integration Approach}}},
+  shorttitle = {Automated {{Data Slicing}} for {{Model Validation}}},
+  author = {Chung, Yeounoh and Kraska, Tim and Polyzotis, Neoklis and Tae, Ki Hyun and Whang, Steven Euijong},
+  date = {2019-01-06},
+  url = {http://arxiv.org/abs/1807.06068},
+  urldate = {2021-01-25},
+  abstract = {As machine learning systems become democratized, it becomes increasingly important to help users easily debug their models. However, current data tools are still primitive when it comes to helping users trace model performance problems all the way to the data. We focus on the particular problem of slicing data to identify subsets of the validation data where the model performs poorly. This is an important problem in model validation because the overall model performance can fail to reflect that of the smaller subsets, and slicing allows users to analyze the model performance on a more granular-level. Unlike general techniques (e.g., clustering) that can find arbitrary slices, our goal is to find interpretable slices (which are easier to take action compared to arbitrary subsets) that are problematic and large. We propose Slice Finder, which is an interactive framework for identifying such slices using statistical techniques. Applications include diagnosing model fairness and fraud detection, where identifying slices that are interpretable to humans is crucial. This research is part of a larger trend of Big data and Artificial Intelligence (AI) integration and opens many opportunities for new research.},
+  archivePrefix = {arXiv},
+  eprint = {1807.06068},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/J7H5S638/Automated_Data_Slicing_for_Model_Validation_Chung_et_al_2019.pdf},
+  keywords = {_tablet,Computer Science - Databases,Computer Science - Machine Learning},
+  langid = {english},
+  primaryClass = {cs}
+}
+
+@online{corbett-daviesAlgorithmicDecisionMaking2017,
+  title = {Algorithmic Decision Making and the Cost of Fairness},
+  author = {Corbett-Davies, Sam and Pierson, Emma and Feller, Avi and Goel, Sharad and Huq, Aziz},
+  date = {2017-06-09},
+  doi = {10.1145/3097983.309809},
+  url = {http://arxiv.org/abs/1701.08230},
+  urldate = {2020-09-09},
+  abstract = {Algorithms are now regularly used to decide whether defendants awaiting trial are too dangerous to be released back into the community. In some cases, black defendants are substantially more likely than white defendants to be incorrectly classi ed as high risk. To mitigate such disparities, several techniques have recently been proposed to achieve algorithmic fairness. Here we reformulate algorithmic fairness as constrained optimization: the objective is to maximize public safety while satisfying formal fairness constraints designed to reduce racial disparities. We show that for several past de nitions of fairness, the optimal algorithms that result require detaining defendants above race-speci c risk thresholds. We further show that the optimal unconstrained algorithm requires applying a single, uniform threshold to all defendants. e unconstrained algorithm thus maximizes public safety while also satisfying one important understanding of equality: that all individuals are held to the same standard, irrespective of race. Because the optimal constrained and unconstrained algorithms generally di er, there is tension between improving public safety and satisfying prevailing notions of algorithmic fairness. By examining data from Broward County, Florida, we show that this trade-o can be large in practice. We focus on algorithms for pretrial release decisions, but the principles we discuss apply to other domains, and also to human decision makers carrying out structured decision rules.},
+  archivePrefix = {arXiv},
+  eprint = {1701.08230},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/3PJLC9G2/Algorithmic_decision_making_and_the_cost_of_fairness_Corbett-Davies_et_al_2017.pdf},
+  keywords = {_tablet,Computer Science - Computers and Society,Statistics - Applications},
+  langid = {english},
+  primaryClass = {cs, stat}
+}
+
+@article{dalessandroConscientiousClassificationData2017,
+  title = {Conscientious {{Classification}}: {{A Data Scientist}}'s {{Guide}} to {{Discrimination}}-{{Aware Classification}}},
+  shorttitle = {Conscientious {{Classification}}},
+  author = {d' Alessandro, Brian and O'Neil, Cathy and LaGatta, Tom},
+  date = {2017-06},
+  journaltitle = {Big Data},
+  shortjournal = {Big Data},
+  volume = {5},
+  pages = {120--134},
+  issn = {2167-6461, 2167-647X},
+  doi = {10.1089/big.2016.0048},
+  url = {http://www.liebertpub.com/doi/10.1089/big.2016.0048},
+  urldate = {2020-09-09},
+  abstract = {Recent research has helped to cultivate growing awareness that machine learning systems fueled by big data can create or exacerbate troubling disparities in society. Much of this research comes from outside of the practicing data science community, leaving its members with little concrete guidance to proactively address these concerns. This article introduces issues of discrimination to the data science community on its own terms. In it, we tour the familiar data mining process while providing a taxonomy of common practices that have the potential to produce unintended discrimination. We also survey how discrimination is commonly measured, and suggest how familiar development processes can be augmented to mitigate systems’ discriminatory potential. We advocate that data scientists should be intentional about modeling and reducing discriminatory outcomes. Without doing so, their efforts will result in perpetuating any systemic discrimination that may exist, but under a misleading veil of data-driven objectivity.},
+  file = {/home/brian/Zotero/storage/J33ZLRMZ/Conscientious_Classification_d'Alessandro_et_al_2017.pdf},
+  keywords = {_tablet},
+  langid = {english},
+  number = {2},
+  options = {useprefix=true}
+}
+
+@inproceedings{farnadiFairnessRelationalDomains2018,
+  title = {Fairness in {{Relational Domains}}},
+  booktitle = {Proceedings of the 2018 {{AAAI}}/{{ACM Conference}} on {{AI}}, {{Ethics}}, and {{Society}}},
+  author = {Farnadi, Golnoosh and Babaki, Behrouz and Getoor, Lise},
+  date = {2018-12-27},
+  pages = {108--114},
+  publisher = {{ACM}},
+  location = {{New Orleans LA USA}},
+  doi = {10.1145/3278721.3278733},
+  url = {https://dl.acm.org/doi/10.1145/3278721.3278733},
+  urldate = {2020-09-09},
+  abstract = {AI and machine learning tools are being used with increasing frequency for decision making in domains that affect peoples’ lives such as employment, education, policing and loan approval. These uses raise concerns about biases of algorithmic discrimination and have motivated the development of fairness-aware machine learning. However, existing fairness approaches are based solely on attributes of individuals. In many cases, discrimination is much more complex, and taking into account the social, organizational, and other connections between individuals is important. We introduce new notions of fairness that are able to capture the relational structure in a domain. We use first-order logic to provide a flexible and expressive language for specifying complex relational patterns of discrimination. Furthermore, we extend an existing statistical relational learning framework, probabilistic soft logic (PSL), to incorporate our definition of relational fairness. We refer to this fairness-aware framework FairPSL. FairPSL makes use of the logical definitions of fairnesss but also supports a probabilistic interpretation. In particular, we show how to perform maximum a posteriori(MAP) inference by exploiting probabilistic dependencies within the domain while avoiding violation of fairness guarantees. Preliminary empirical evaluation shows that we are able to make both accurate and fair decisions.},
+  eventtitle = {{{AIES}} '18: {{AAAI}}/{{ACM Conference}} on {{AI}}, {{Ethics}}, and {{Society}}},
+  file = {/home/brian/Zotero/storage/E99CNTDJ/Fairness_in_Relational_Domains_Farnadi_et_al_2018.pdf},
+  isbn = {978-1-4503-6012-8},
+  keywords = {_tablet},
+  langid = {english}
+}
+
+@article{grgic-hlacvaCaseProcessFairness,
+  title = {The {{Case}} for {{Process Fairness}} in {{Learning}}: {{Feature Selection}} for {{Fair Decision Making}}},
+  author = {Grgic-Hlacˇa, Nina and Zafar, Muhammad Bilal and Gummadi, Krishna P and Weller, Adrian},
+  pages = {11},
+  abstract = {Machine learning methods are increasingly being used to inform, or sometimes even directly to make, important decisions about humans. A number of recent works have focussed on the fairness of the outcomes of such decisions, particularly on avoiding decisions that affect users of different sensitive groups (e.g., race, gender) disparately. In this paper, we propose to consider the fairness of the process of decision making. Process fairness can be measured by estimating the degree to which people consider various features to be fair to use when making an important legal decision. We examine the task of predicting whether or not a prisoner is likely to commit a crime again once released by analyzing the dataset considered by ProPublica relating to the COMPAS system. We introduce new measures of people’s discomfort with using various features, show how these measures can be estimated, and consider the effect of removing the uncomfortable features on prediction accuracy and on outcome fairness. Our empirical analysis suggests that process fairness may be achieved with little cost to outcome fairness, but that some loss of accuracy is unavoidable.},
+  file = {/home/brian/Zotero/storage/KAU262TT/The_Case_for_Process_Fairness_in_Learning_Grgic-Hlacˇa_et_al_.pdf},
+  keywords = {_tablet},
+  langid = {english}
+}
+
+@online{hardtEqualityOpportunitySupervised2016,
+  title = {Equality of {{Opportunity}} in {{Supervised Learning}}},
+  author = {Hardt, Moritz and Price, Eric and Srebro, Nathan},
+  date = {2016-10-07},
+  url = {http://arxiv.org/abs/1610.02413},
+  urldate = {2020-09-09},
+  abstract = {We propose a criterion for discrimination against a specified sensitive attribute in supervised learning, where the goal is to predict some target based on available features. Assuming data about the predictor, target, and membership in the protected group are available, we show how to optimally adjust any learned predictor so as to remove discrimination according to our definition. Our framework also improves incentives by shifting the cost of poor classification from disadvantaged groups to the decision maker, who can respond by improving the classification accuracy.},
+  archivePrefix = {arXiv},
+  eprint = {1610.02413},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/LXZM847C/Equality_of_Opportunity_in_Supervised_Learning_Hardt_et_al_2016.pdf},
+  keywords = {_tablet,Computer Science - Machine Learning},
+  langid = {english},
+  primaryClass = {cs}
+}
+
+@online{hashimotoFairnessDemographicsRepeated2018,
+  title = {Fairness {{Without Demographics}} in {{Repeated Loss Minimization}}},
+  author = {Hashimoto, Tatsunori B. and Srivastava, Megha and Namkoong, Hongseok and Liang, Percy},
+  date = {2018-07-30},
+  url = {http://arxiv.org/abs/1806.08010},
+  urldate = {2021-01-05},
+  abstract = {Machine learning models (e.g., speech recognizers) are usually trained to minimize average loss, which results in representation disparity—minority groups (e.g., non-native speakers) contribute less to the training objective and thus tend to suffer higher loss. Worse, as model accuracy affects user retention, a minority group can shrink over time. In this paper, we first show that the status quo of empirical risk minimization (ERM) amplifies representation disparity over time, which can even make initially fair models unfair. To mitigate this, we develop an approach based on distributionally robust optimization (DRO), which minimizes the worst case risk over all distributions close to the empirical distribution. We prove that this approach controls the risk of the minority group at each time step, in the spirit of Rawlsian distributive justice, while remaining oblivious to the identity of the groups. We demonstrate that DRO prevents disparity amplification on examples where ERM fails, and show improvements in minority group user satisfaction in a real-world text autocomplete task.},
+  archivePrefix = {arXiv},
+  eprint = {1806.08010},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/NYRU7AY4/Fairness_Without_Demographics_in_Repeated_Loss_Minimization_Hashimoto_et_al_2018.pdf},
+  keywords = {_tablet,Computer Science - Machine Learning,Statistics - Machine Learning},
+  langid = {english},
+  primaryClass = {cs, stat}
+}
+
+@online{hebert-johnsonCalibrationComputationallyIdentifiableMasses2018,
+  title = {Calibration for the ({{Computationally}}-{{Identifiable}}) {{Masses}}},
+  author = {Hébert-Johnson, Úrsula and Kim, Michael P. and Reingold, Omer and Rothblum, Guy N.},
+  date = {2018-03-16},
+  url = {http://arxiv.org/abs/1711.08513},
+  urldate = {2021-01-07},
+  abstract = {As algorithms increasingly inform and influence decisions made about individuals, it becomes increasingly important to address concerns that these algorithms might be discriminatory. The output of an algorithm can be discriminatory for many reasons, most notably: (1) the data used to train the algorithm might be biased (in various ways) to favor certain populations over others; (2) the analysis of this training data might inadvertently or maliciously introduce biases that are not borne out in the data. This work focuses on the latter concern.},
+  archivePrefix = {arXiv},
+  eprint = {1711.08513},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/2JCB558L/Hébert-Johnson et al. - 2018 - Calibration for the (Computationally-Identifiable).pdf},
+  keywords = {Computer Science - Data Structures and Algorithms,Computer Science - Machine Learning,Statistics - Machine Learning},
+  langid = {english},
+  primaryClass = {cs, stat}
+}
+
+@online{kleinbergInherentTradeOffsFair2016,
+  title = {Inherent {{Trade}}-{{Offs}} in the {{Fair Determination}} of {{Risk Scores}}},
+  author = {Kleinberg, Jon and Mullainathan, Sendhil and Raghavan, Manish},
+  date = {2016-11-17},
+  url = {http://arxiv.org/abs/1609.05807},
+  urldate = {2021-01-10},
+  abstract = {Recent discussion in the public sphere about algorithmic classification has involved tension between competing notions of what it means for a probabilistic classification to be fair to different groups. We formalize three fairness conditions that lie at the heart of these debates, and we prove that except in highly constrained special cases, there is no method that can satisfy these three conditions simultaneously. Moreover, even satisfying all three conditions approximately requires that the data lie in an approximate version of one of the constrained special cases identified by our theorem. These results suggest some of the ways in which key notions of fairness are incompatible with each other, and hence provide a framework for thinking about the trade-offs between them.},
+  archivePrefix = {arXiv},
+  eprint = {1609.05807},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/WV39Z2SX/Inherent_Trade-Offs_in_the_Fair_Determination_of_Risk_Scores_Kleinberg_et_al_2016.pdf},
+  keywords = {_tablet,Computer Science - Computers and Society,Computer Science - Machine Learning,Statistics - Machine Learning},
+  langid = {english},
+  primaryClass = {cs, stat}
+}
+
+@online{kusnerCounterfactualFairness2018,
+  title = {Counterfactual {{Fairness}}},
+  author = {Kusner, Matt J. and Loftus, Joshua R. and Russell, Chris and Silva, Ricardo},
+  date = {2018-03-08},
+  url = {http://arxiv.org/abs/1703.06856},
+  urldate = {2020-09-09},
+  abstract = {Machine learning can impact people with legal or ethical consequences when it is used to automate decisions in areas such as insurance, lending, hiring, and predictive policing. In many of these scenarios, previous decisions have been made that are unfairly biased against certain subpopulations, for example those of a particular race, gender, or sexual orientation. Since this past data may be biased, machine learning predictors must account for this to avoid perpetuating or creating discriminatory practices. In this paper, we develop a framework for modeling fairness using tools from causal inference. Our definition of counterfactual fairness captures the intuition that a decision is fair towards an individual if it is the same in (a) the actual world and (b) a counterfactual world where the individual belonged to a different demographic group. We demonstrate our framework on a real-world problem of fair prediction of success in law school.},
+  archivePrefix = {arXiv},
+  eprint = {1703.06856},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/UBQ4EBW8/Counterfactual_Fairness_Kusner_et_al_2018.pdf},
+  keywords = {_tablet,Computer Science - Computers and Society,Computer Science - Machine Learning,Statistics - Machine Learning},
+  langid = {english},
+  primaryClass = {cs, stat}
+}
+
+@online{lahotiFairnessDemographicsAdversarially2020,
+  title = {Fairness without {{Demographics}} through {{Adversarially Reweighted Learning}}},
+  author = {Lahoti, Preethi and Beutel, Alex and Chen, Jilin and Lee, Kang and Prost, Flavien and Thain, Nithum and Wang, Xuezhi and Chi, Ed H.},
+  date = {2020-11-03},
+  url = {http://arxiv.org/abs/2006.13114},
+  urldate = {2021-01-05},
+  abstract = {Much of the previous machine learning (ML) fairness literature assumes that protected features such as race and sex are present in the dataset, and relies upon them to mitigate fairness concerns. However, in practice factors like privacy and regulation often preclude the collection of protected features, or their use for training or inference, severely limiting the applicability of traditional fairness research. Therefore we ask: How can we train an ML model to improve fairness when we do not even know the protected group memberships? In this work we address this problem by proposing Adversarially Reweighted Learning (ARL). In particular, we hypothesize that non-protected features and task labels are valuable for identifying fairness issues, and can be used to co-train an adversarial reweighting approach for improving fairness. Our results show that ARL improves Rawlsian Max-Min fairness, with notable AUC improvements for worst-case protected groups in multiple datasets, outperforming state-of-the-art alternatives.},
+  archivePrefix = {arXiv},
+  eprint = {2006.13114},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/9SVYICMJ/Fairness_without_Demographics_through_Adversarially_Reweighted_Learning_Lahoti_et_al_2020.pdf},
+  keywords = {_tablet,Computer Science - Machine Learning,Statistics - Machine Learning},
+  langid = {english},
+  primaryClass = {cs, stat}
+}
+
+@online{louizosVariationalFairAutoencoder2017,
+  title = {The {{Variational Fair Autoencoder}}},
+  author = {Louizos, Christos and Swersky, Kevin and Li, Yujia and Welling, Max and Zemel, Richard},
+  date = {2017-08-09},
+  url = {http://arxiv.org/abs/1511.00830},
+  urldate = {2020-10-29},
+  abstract = {We investigate the problem of learning representations that are invariant to certain nuisance or sensitive factors of variation in the data while retaining as much of the remaining information as possible. Our model is based on a variational autoencoding architecture (Kingma \& Welling, 2014; Rezende et al., 2014) with priors that encourage independence between sensitive and latent factors of variation. Any subsequent processing, such as classification, can then be performed on this purged latent representation. To remove any remaining dependencies we incorporate an additional penalty term based on the “Maximum Mean Discrepancy” (MMD) (Gretton et al., 2006) measure. We discuss how these architectures can be efficiently trained on data and show in experiments that this method is more effective than previous work in removing unwanted sources of variation while maintaining informative latent representations.},
+  archivePrefix = {arXiv},
+  eprint = {1511.00830},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/3PV5HP2F/The_Variational_Fair_Autoencoder_Louizos_et_al_2017.pdf},
+  keywords = {_tablet,Computer Science - Machine Learning,Statistics - Machine Learning},
+  langid = {english},
+  primaryClass = {cs, stat}
+}
+
+@online{mehrabiSurveyBiasFairness2019a,
+  title = {A {{Survey}} on {{Bias}} and {{Fairness}} in {{Machine Learning}}},
+  author = {Mehrabi, Ninareh and Morstatter, Fred and Saxena, Nripsuta and Lerman, Kristina and Galstyan, Aram},
+  date = {2019-09-17},
+  url = {http://arxiv.org/abs/1908.09635},
+  urldate = {2020-09-09},
+  abstract = {With the widespread use of AI systems and applications in our everyday lives, it is important to take fairness issues into consideration while designing and engineering these types of systems. Such systems can be used in many sensitive environments to make important and life-changing decisions; thus, it is crucial to ensure that the decisions do not reflect discriminatory behavior toward certain groups or populations. We have recently seen work in machine learning, natural language processing, and deep learning that addresses such challenges in different subdomains. With the commercialization of these systems, researchers are becoming aware of the biases that these applications can contain and have attempted to address them. In this survey we investigated different real-world applications that have shown biases in various ways, and we listed different sources of biases that can affect AI applications. We then created a taxonomy for fairness definitions that machine learning researchers have defined in order to avoid the existing bias in AI systems. In addition to that, we examined different domains and subdomains in AI showing what researchers have observed with regard to unfair outcomes in the state-of-the-art methods and how they have tried to address them. There are still many future directions and solutions that can be taken to mitigate the problem of bias in AI systems. We are hoping that this survey will motivate researchers to tackle these issues in the near future by observing existing work in their respective fields.},
+  archivePrefix = {arXiv},
+  eprint = {1908.09635},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/GLDZJDEH/A_Survey_on_Bias_and_Fairness_in_Machine_Learning_Mehrabi_et_al_2019.pdf},
+  keywords = {_tablet,Computer Science - Machine Learning},
+  langid = {english},
+  primaryClass = {cs}
+}
+
+@online{sureshFrameworkUnderstandingUnintended2020,
+  title = {A {{Framework}} for {{Understanding Unintended Consequences}} of {{Machine Learning}}},
+  author = {Suresh, Harini and Guttag, John V.},
+  date = {2020-02-17},
+  url = {http://arxiv.org/abs/1901.10002},
+  urldate = {2020-09-09},
+  abstract = {As machine learning increasingly affects people and society, it is important that we strive for a comprehensive and unified understanding of potential sources of unwanted consequences. For instance, downstream harms to particular groups are often blamed on "biased data," but this concept encompass too many issues to be useful in developing solutions. In this paper, we provide a framework that partitions sources of downstream harm in machine learning into six distinct categories spanning the data generation and machine learning pipeline. We describe how these issues arise, how they are relevant to particular applications, and how they motivate different solutions. In doing so, we aim to facilitate the development of solutions that stem from an understanding of application-specific populations and data generation processes, rather than relying on general statements about what may or may not be "fair."},
+  archivePrefix = {arXiv},
+  eprint = {1901.10002},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/9CZAJNIE/A_Framework_for_Understanding_Unintended_Consequences_of_Machine_Learning_Suresh_Guttag_2020.pdf},
+  keywords = {_tablet,Computer Science - Machine Learning,Statistics - Machine Learning},
+  langid = {english},
+  primaryClass = {cs, stat}
+}
+
+@inproceedings{vermaFairnessDefinitionsExplained2018,
+  title = {Fairness Definitions Explained},
+  booktitle = {Proceedings of the {{International Workshop}} on {{Software Fairness}} - {{FairWare}} '18},
+  author = {Verma, Sahil and Rubin, Julia},
+  date = {2018},
+  pages = {1--7},
+  publisher = {{ACM Press}},
+  location = {{Gothenburg, Sweden}},
+  doi = {10.1145/3194770.3194776},
+  url = {http://dl.acm.org/citation.cfm?doid=3194770.3194776},
+  urldate = {2020-09-09},
+  abstract = {Algorithm fairness has started to attract the attention of researchers in AI, Software Engineering and Law communities, with more than twenty different notions of fairness proposed in the last few years. Yet, there is no clear agreement on which definition to apply in each situation. Moreover, the detailed differences between multiple definitions are difficult to grasp. To address this issue, this paper collects the most prominent definitions of fairness for the algorithmic classification problem, explains the rationale behind these definitions, and demonstrates each of them on a single unifying case-study. Our analysis intuitively explains why the same case can be considered fair according to some definitions and unfair according to others.},
+  eventtitle = {The {{International Workshop}}},
+  file = {/home/brian/Zotero/storage/FE5MGA8H/Fairness_definitions_explained_Verma_Rubin_2018.pdf},
+  isbn = {978-1-4503-5746-3},
+  keywords = {_tablet},
+  langid = {english}
+}
+
+@article{zhangFairnessDecisionMakingCausala,
+  title = {Fairness in {{Decision}}-{{Making}} - {{The Causal Explanation Formula}}},
+  author = {Zhang, Junzhe and Bareinboim, Elias},
+  pages = {16},
+  abstract = {AI plays an increasingly prominent role in society since decisions that were once made by humans are now delegated to automated systems. These systems are currently in charge of deciding bank loans, criminals’ incarceration, and the hiring of new employees, and it’s not difficult to envision that they will in the future underpin most of the decisions in society. Despite the high complexity entailed by this task, there is still not much understanding of basic properties of such systems. For instance, we currently cannot detect (neither explain nor correct) whether an AI system is operating fairly (i.e., is abiding by the decision-constraints agreed by society) or it is reinforcing biases and perpetuating a preceding prejudicial practice. Issues of discrimination have been discussed extensively in legal circles, but there exists still not much understanding of the formal conditions that an automated system must adhere to be deemed fair. In this paper, we use the language of structural causality (Pearl, 2000) to fill in this gap. We start by introducing three new fine-grained measures of transmission of change from stimulus to effect called counterfactual direct (Ctf-DE), indirect (Ctf-IE), and spurious (Ctf-SE) effects. Building on these measures, we derive the causal explanation formula, which allows the AI designer to quantitatively evaluate fairness and explain the total observed disparity of decisions through different discriminatory mechanisms. We apply these results to various discrimination analysis tasks and run extensive simulations, including detection, evaluation, and optimization of decision-making under fairness constraints. We conclude studying the trade-off between different types of fairness criteria (outcome and procedural), and provide a quantitative approach to policy implementation and the design of fair decision-making systems.},
+  file = {/home/brian/Zotero/storage/RRRK7VFZ/Fairness_in_Decision-Making_-_The_Causal_Explanation_Formula_Zhang_Bareinboim_.pdf},
+  keywords = {_tablet},
+  langid = {english}
+}
+
+@article{zhangNonParametricPathAnalysis,
+  title = {Non-{{Parametric Path Analysis}} in {{Structural Causal Models}}},
+  author = {Zhang, Junzhe and Bareinboim, Elias},
+  pages = {26},
+  abstract = {One of the fundamental tasks in causal inference is to decompose the observed association between a decision X and an outcome Y into its most basic structural mechanisms. In this paper, we introduce counterfactual measures for effects along with a specific mechanism, represented as a path from X to Y in an arbitrary structural causal model. We derive a novel non-parametric decomposition formula that expresses the covariance of X and Y as a sum over unblocked paths from X to Y contained in an arbitrary causal model. This formula allows a fine-grained path analysis without requiring a commitment to any particular parametric form, and can be seen as a generalization of Wright’s decomposition method in linear systems (1923,1932) and Pearl’s nonparametric mediation formula (2001).},
+  file = {/home/brian/Zotero/storage/JF3GWPM8/Non-Parametric_Path_Analysis_in_Structural_Causal_Models_Zhang_Bareinboim_.pdf},
+  keywords = {_tablet},
+  langid = {english}
+}
+
+@online{zikoVariationalFairClustering2020,
+  title = {Variational {{Fair Clustering}}},
+  author = {Ziko, Imtiaz Masud and Granger, Eric and Yuan, Jing and Ayed, Ismail Ben},
+  date = {2020-06-11},
+  url = {http://arxiv.org/abs/1906.08207},
+  urldate = {2020-10-29},
+  abstract = {We propose a general variational framework of fair clustering, which integrates an original Kullback-Leibler (KL) fairness term with a large class of clustering objectives, including prototype or graph based. Fundamentally different from the existing combinatorial and spectral solutions, our variational multi-term approach enables to control the trade-off levels between the fairness and clustering objectives. We derive a general tight upper bound based on a concave-convex decomposition of our fairness term, its Lipschitz-gradient property and the Pinsker inequality. Our tight upper bound can be jointly optimized with various clustering objectives, while yielding a scalable solution, with convergence guarantee. Interestingly, at each iteration, it performs an independent update for each assignment variable. Therefore, it can easily be distributed for large-scale datasets. This scalability is important as it enables to explore different trade-off levels between fairness and the clustering objective. Unlike spectral relaxation, our formulation does not require storing an affinity matrix and computing its eigenvalue decomposition. We report comprehensive evaluations and comparisons with state-of-the-art methods over various fair-clustering benchmarks, which show that our variational method can yield highly competitive solutions in terms of fairness and clustering objectives.},
+  archivePrefix = {arXiv},
+  eprint = {1906.08207},
+  eprinttype = {arxiv},
+  file = {/home/brian/Zotero/storage/SD7P6N6D/Variational_Fair_Clustering_Ziko_et_al_2020.pdf},
+  keywords = {_tablet,Computer Science - Machine Learning,Statistics - Machine Learning},
+  langid = {english},
+  primaryClass = {cs, stat}
+}
+
+@preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
+
