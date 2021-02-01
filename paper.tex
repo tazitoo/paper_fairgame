@@ -168,7 +168,7 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-  Fairness in model predictions, as well as being an implicit ethical requirement, can be enforced by laws  generically over the whole population (e.g. GPDR) and sometimes by regulation on industries (e.g. fair lending laws).  A challenge arises when the model developer is tasked with building a fair model without demographic information (i.e. with all protected class information being withheld).  We propose a post-hoc analysis method called \textit{FairGAMe} to detect the presence of bias in the model using model centric subgroups formed from clusters of model explanations.
+  Fairness in model predictions, as well as being an implicit ethical requirement, can be enforced by laws  generically over the whole population (e.g. GPDR) or by regulation on industries (e.g. fair lending laws).  A challenge arises when the model developer is tasked with building a fair model without demographic information (i.e. with all protected class information being withheld).  We propose a post-hoc analysis method called \textit{FairGAMe} to detect the presence of bias in the model using model centric subgroups formed from clusters of model explanations.
 \end{abstract}
 
 %%
@@ -217,10 +217,18 @@
 \maketitle
 
 \section{Introduction}
+Predictions from machine learning models have become common place in every day life, in a vast array of scenarios - from recommending products and movies, to finding a date, to automating decisions on loans, to predicting the risk a criminal will commit another crime.
 
+To help explain the predictions made from these models, explainable artificial intelligence (XAI) has provided a host of methods to show which of a model's features has the highest importance relating to that individual data sample (e.g. saliency maps, SHAP, deep lift, LIME, and counterfactual explanations).  The explanations of predictions can insure that the model is making the predictions for the right reason.
+
+However, this by itself is not sufficient when the predictions have an impact on humans.  It is possible that the data used to train the model carries historical bias against segments of the population - e.g. the fact that historically women make less than men, see~\citet{dalessandroConscientiousClassificationData2017} for an overview.  A model trained on such data can cause that historical bias to become entrenched and perpetuate into the future, even in the face of changing public opinion.  To combat this, statistical measures of fairness have been developed.  Model predictions aggregated over segments of the population can be compared to other segments to gauge a model's fairness.
+
+That sort of statistical assessment of a model's fairness is not always possible - the demographics of the data samples may be missing, or not shared with the model developers (see e.g. fairness through unawareness).  Methods have been proposed to increase a model's fairness through various re-weighting of the training samples.  What seems to be lacking in this space of fairness metrics and attempts to fix a model - is a method to detect the possibility of bias.  If it ain't broke, don't fix it.
+
+We propose a method of detecting model bias when it is trained on data lacking demographic features using unsupervised clustering on model explanations - a process we call FairGAMe.  Through a series of experiments using synthetic data and black box models, we provide detection of model bias through its performance on machine learning metrics (like AUC) as well as on suitable (problem specific) fairness metrics calculated on the subpopulations determined by the clustering algorithm.  We also provide intuitive statistical insights as to the cause of a model's bias.
 
 \section{Previous work}
-
+This work sits at the intersection of machine learning, explainability and fairness. 
 XAI
 
 Fairness Metrics
@@ -231,17 +239,31 @@ precision medicine paper (same approach - different topic).
 
 This line of work is nice in that it highlights that models can sometimes learn additional useful signal that is revealed in the analysis of the explanations.
 
-Our contribution is a novel method for detection of bias in models trained without demographic information.  We provide insights on the causes of model bias - from a purely statistical point of view.  
+Our contribution is
+\begin{itemize}
+    \item a bias\/fairness testing framework using synthetic data
+    \item a novel method for detection of bias in models trained without demographic information
+    \item insights on the statistical causes of model bias
+\end{itemize}
 
-The analysis should demonstrate what demographics are captured in each cluster - GAM clusters are model centric - we have to show there is a correlation to some human element to actually deem that it's (un)fair.
+The analysis should:
+\begin{itemize}
+    \item describe what's contained in each cluster - important variables, segments of marginal distributions of input variables, possibly tie back to demographics (which is cheating since in the real world this cannot be done)
+    \item compare and contrast behavior of fair vs unfair data
+\end{itemize}
+
 
 \section{Synthetic datasets}
-We focus on a binary classification problem of determining whether an employee will be promoted.
+\subsection{Problem formulation}
+Imagine a data scientist working at a company, interested in predicting if they will get a promotion during the current employee evaluation cycle.  Leveraging their network of friends, they anonymously collect data from previous years on features (and their type): productivity (categorical), salary (continuous), bonus (continuous), years of service (continuous),  and performance rating (categorical).  In our hypothetical story, consider in an alternate universe, they also collect data on gender (binary) and race (categorical) - the data for all other features being identical. In both universes, the problem is formulated as a binary classification problem and a model is fit.  Given the historical data, the model has enough predictive capability to be useful.
 
-For our case study, we generate datasets with the following features (and their type): gender (categorical), race (categorical), productivity (categorical), salary (continuous), bonus (continuous), years of service (continuous),  and performance rating (categorical).
+Some colleagues get wind of this side of desk project - and do predictions on their own data.  Some are unhappy with the outcomes - thinking that they had deserved a promotion previously and did not get one.   After hours conversations start raising questions if there are patterns of missed opportunities that are more widespread than just at the individual level.
+
+Our interest lies in the universe that did not collect demographic information since it is the most challenging (and hence interesting from a data science perspective).  At times however, it will prove useful to glimpse at the demographic data from the other universe.
+
 
 \subsection{Synthetic bias}
-The synthetic bias injected into the classification labels is of two types:
+Synthetic bias can be injected into the classification labels is of two types:
 \begin{itemize}
     \item overt - when terms in our symbolic expression depend on the value of the protected attributes - gender and race.
     \item proxied - when other features are correlated with protected attributes.  This allows for leakage of information about the protected attributes, even if they are not explicitly used as features during model training.
@@ -270,7 +292,7 @@ We will adopt a four fifths rule on FNR as our fairness metric.  A false negativ
 \subsection{Fair data analysis}
 
 \subsection{other examples}
-Other exps to run to verify/solidify this hypothesis:
+Other experiments to run to verify/solidify this hypothesis:
 
 \begin{itemize}
     \item overt
@@ -428,7 +450,7 @@ The author would like to thank a bunch of people for making this paper become a 
 %% The next two lines define the bibliography style to be used, and
 %% the bibliography file.
 \bibliographystyle{ACM-Reference-Format}
-\bibliography{sample-base}
+\bibliography{fairgame}
 
 %%
 %% If your work has an appendix, this is the place to put it.
